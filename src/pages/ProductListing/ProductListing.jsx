@@ -21,7 +21,7 @@ export const ProductListing = () => {
         <ProductFilters />
         <div className="product-section flex-row flex-wrap gp-2xl">
           {products.map((product) => (
-            <ProductCard productDetail={product} key={product._id} />
+            <ProductCard productDetails={product} key={product._id} />
           ))}
         </div>
       </main>
