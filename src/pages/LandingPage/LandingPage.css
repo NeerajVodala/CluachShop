@@ -1,0 +1,19 @@
+.header-home {
+  background: transparent;
+}
+
+.lp-img-container {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 20%;
+}
+
+.lp-heading {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.lp-container {
+  min-height: 80vh;
+}

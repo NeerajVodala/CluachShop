@@ -1,0 +1,19 @@
+.filter-section {
+  flex-basis: 20%;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+}
+
+.product-section {
+  flex-basis: 80%;
+  margin: 2rem;
+}
+
+.price-slider {
+  width: 50%;
+}
+
+.card-actions {
+  gap: 0.5rem;
+  padding: 0;
+}

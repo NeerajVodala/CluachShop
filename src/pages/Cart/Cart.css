@@ -1,0 +1,56 @@
+.cart-container {
+  margin: 2rem 0;
+}
+
+.cart-product-section {
+  gap: 2rem;
+  flex-basis: 60%;
+}
+
+.cart-price-section {
+  flex-basis: 40%;
+}
+
+.card-horizontal {
+  max-height: 25rem;
+  margin: auto;
+}
+
+.card-horizontal-media {
+  width: 40%;
+}
+
+.card-horizontal-media img {
+  opacity: 70%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-horizontal-nonmedia {
+  width: 60%;
+}
+
+.card-horizontal-details {
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card-actions {
+  padding: 1rem 0;
+}
+
+.operator {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--bg-primary);
+}
+
+.price-card {
+  background-color: var(--bg-secondary);
+  width: 90%;
+  padding: 3rem;
+  margin-right: auto;
+  gap: 1rem;
+}
