@@ -1,9 +1,11 @@
 import cap from "../../assets/images/cap.jpg";
+import { Navbar } from "../../components/Navbar/Navbar";
 import "./ProductListing.css";
 
 export const ProductListing = () => {
   return (
     <>
+      <Navbar />
       <main className="flex-row">
         <div className="filter-section flex-col gp-2xl">
           <div className="flex-row justify-between">

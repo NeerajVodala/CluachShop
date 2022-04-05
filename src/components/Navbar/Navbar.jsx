@@ -1,33 +1,32 @@
+import { Link } from "react-router-dom";
+
 export const Navbar = () => {
   return (
     <>
-      <header class="header">
-        <a href="/index.html">
-          <div class="header-logo">
-            <i class="fas fa-cogs fa-2x"></i>
+      <header className="header">
+        <Link to="/home">
+          <div className="header-logo">
+            <i className="fas fa-cogs fa-2x"></i>
             <h2>cluachShop</h2>
           </div>
-        </a>
+        </Link>
 
-        <div class="header-nav">
-          <a
-            href="/pages/authentication/login.html"
-            class="btn outline btn-s br-s"
-          >
+        <div className="header-nav">
+          <Link to="/login" className="btn outline btn-s br-s">
             Login
-          </a>
-          <a href="/pages/wishlist.html">
-            <div class="badge-container">
-              <i class="far fa-heart icon"></i>
-              <span class="badge-number br-full">2</span>
+          </Link>
+          <Link to="/wishlist">
+            <div className="badge-container">
+              <i className="far fa-heart icon"></i>
+              <span className="badge-number br-full">2</span>
             </div>
-          </a>
-          <a href="/pages/cart.html">
-            <div class="badge-container">
-              <i class="fas fa-shopping-cart icon"></i>
-              <span class="badge-number br-full">2</span>
+          </Link>
+          <Link to="/cart">
+            <div className="badge-container">
+              <i className="fas fa-shopping-cart icon"></i>
+              <span className="badge-number br-full">2</span>
             </div>
-          </a>
+          </Link>
         </div>
       </header>
     </>

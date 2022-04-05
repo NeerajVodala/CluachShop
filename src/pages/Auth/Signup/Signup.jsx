@@ -1,81 +1,82 @@
+import { Link } from "react-router-dom";
+import { Navbar } from "../../../components/Navbar/Navbar";
 import "../Auth.css";
 
 export const Signup = () => {
   return (
     <>
-      <main class="auth-page flex-row align-center justify-center">
-        <div class="auth-container flex-row align-center justify-center shadow-1 br-s">
-          <div class="input-section">
+      <Navbar />
+      <main className="auth-page flex-row align-center justify-center">
+        <div className="auth-container flex-row align-center justify-center shadow-1 br-s">
+          <div className="input-section">
             <h3>Signup</h3>
-            <div class="flex-row align-center justify-center gp-2xl">
-              <div class="input-container">
-                <label for="first-name" class="label">
+            <div className="flex-row align-center justify-center gp-2xl">
+              <div className="input-container">
+                <label for="first-name" className="label">
                   First Name
                 </label>
                 <input
                   type="text"
                   placeholder="Enter first name"
-                  class="input"
+                  className="input"
                   id="first-name"
                 />
               </div>
-              <div class="input-container">
-                <label for="last-name" class="label">
+              <div className="input-container">
+                <label for="last-name" className="label">
                   Last Name
                 </label>
                 <input
                   type="text"
                   placeholder="Enter last name"
-                  class="input"
+                  className="input"
                   id="last-name"
                 />
               </div>
             </div>
-            <div class="input-container">
-              <label for="email" class="label">
+            <div className="input-container">
+              <label for="email" className="label">
                 Email address
               </label>
               <input
                 type="email"
                 placeholder="email@example.com"
-                class="input"
+                className="input"
                 id="email"
               />
             </div>
-            <div class="input-container">
-              <label for="password" class="label">
+            <div className="input-container">
+              <label for="password" className="label">
                 Password
               </label>
               <input
                 type="password"
                 placeholder="••••••••"
-                class="input"
+                className="input"
                 id="password"
               />
             </div>
-            <div class="input-container">
-              <label for="password" class="label">
+            <div className="input-container">
+              <label for="password" className="label">
                 Confirm Password
               </label>
               <input
                 type="password"
                 placeholder="••••••••"
-                class="input"
+                className="input"
                 id="password"
               />
             </div>
             <div>
               <input type="checkbox" id="terms" />
-              <label for="terms" class="label">
+              <label for="terms" className="label">
                 {" "}
                 I accept all Terms & Conditions
               </label>
             </div>
-            <button class="btn btn-m solid br-s">Create New Account</button>
-            <div class="text-center">
-              <a href="/pages/authentication/login.html">
-                Already have an account
-              </a>
+            <button className="btn btn-m solid br-s">Create New Account</button>
+            <div className="text-center">
+              <Link to="/login">Already have an account</Link>
             </div>
           </div>
         </div>

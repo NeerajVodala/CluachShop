@@ -1,47 +1,50 @@
+import { Link } from "react-router-dom";
+import { Navbar } from "../../../components/Navbar/Navbar";
 import "../Auth.css";
 
 export const Login = () => {
   return (
     <>
-      <main class="auth-page flex-row align-center justify-center">
-        <div class="auth-container flex-row align-center justify-center shadow-1 br-s">
-          <div class="input-section">
+      <Navbar />
+      <main className="auth-page flex-row align-center justify-center">
+        <div className="auth-container flex-row align-center justify-center shadow-1 br-s">
+          <div className="input-section">
             <h3>Login</h3>
-            <div class="input-container">
-              <label for="email" class="label">
+            <div className="input-container">
+              <label for="email" className="label">
                 Email address
               </label>
               <input
                 type="email"
                 placeholder="email@example.com"
-                class="input"
+                className="input"
                 id="email"
               />
             </div>
-            <div class="input-container">
-              <label for="password" class="label">
+            <div className="input-container">
+              <label for="password" className="label">
                 Password
               </label>
               <input
                 type="password"
                 placeholder="••••••••"
-                class="input"
+                className="input"
                 id="password"
               />
             </div>
-            <div class="flex-row align-center justify-center gp-2xl">
-              <div class="flex-row align-center gp-s">
+            <div className="flex-row align-center justify-center gp-2xl">
+              <div className="flex-row align-center gp-s">
                 <input type="checkbox" id="remember-me" />
-                <label for="remember-me" class="label text-s">
+                <label for="remember-me" className="label text-s">
                   {" "}
                   Remember me
                 </label>
               </div>
-              <div class="text-s">Forgot your Password?</div>
+              <div className="text-s">Forgot your Password?</div>
             </div>
-            <button class="btn btn-m solid br-s">Login</button>
-            <div class="text-center text-m">
-              <a href="/pages/authentication/signup.html">Create New Account</a>
+            <button className="btn btn-m solid br-s">Login</button>
+            <div className="text-center text-m">
+              <Link to="/signup">Create New Account</Link>
             </div>
           </div>
         </div>
