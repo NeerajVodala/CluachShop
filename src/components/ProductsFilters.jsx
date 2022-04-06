@@ -1,11 +1,15 @@
+import { useFilters } from "../contexts";
+
 export const ProductFilters = () => {
+  const { filterState, filterDispatch: dispatch } = useFilters();
+  const { collections, price, discount, sort } = filterState;
   return (
     <>
       <div className="filter-section flex-col gp-2xl">
         <div className="flex-row justify-between">
           <p className="text-l text-bold">FILTERS</p>
           <p
-            className="text-m text-underline"
+            className="text-m text-underline csr-pointer"
             onClick={() => dispatch({ type: "CLEAR_ALL" })}
           >
             CLEAR ALL
@@ -81,7 +85,6 @@ export const ProductFilters = () => {
             />
           </div>
         </div>
-
         <div className="flex-col gp-xl">
           <p className="text-l text-bold">DISCOUNT</p>
           <div>
@@ -90,6 +93,7 @@ export const ProductFilters = () => {
               id="10percent"
               name="discount"
               value="10"
+              checked={discount === 10}
               onChange={() =>
                 dispatch({ type: "DISCOUNT_FILTER", payload: 10 })
               }
@@ -102,6 +106,7 @@ export const ProductFilters = () => {
               id="20percent"
               name="discount"
               value="20"
+              checked={discount === 20}
               onChange={() =>
                 dispatch({ type: "DISCOUNT_FILTER", payload: 20 })
               }
@@ -114,6 +119,7 @@ export const ProductFilters = () => {
               id="30percent"
               name="discount"
               value="30"
+              checked={discount === 30}
               onChange={() =>
                 dispatch({ type: "DISCOUNT_FILTER", payload: 30 })
               }
@@ -126,6 +132,7 @@ export const ProductFilters = () => {
               id="40percent"
               name="discount"
               value="40"
+              checked={discount === 40}
               onChange={() =>
                 dispatch({ type: "DISCOUNT_FILTER", payload: 40 })
               }
@@ -138,6 +145,7 @@ export const ProductFilters = () => {
               id="50percent"
               name="discount"
               value="50"
+              checked={discount === 50}
               onChange={() =>
                 dispatch({ type: "DISCOUNT_FILTER", payload: 50 })
               }
@@ -152,6 +160,7 @@ export const ProductFilters = () => {
               type="radio"
               id="price-h2l"
               name="sort"
+              checked={sort === "HIGH_TO_LOW"}
               onChange={() =>
                 dispatch({ type: "SORT_FILTER", payload: "HIGH_TO_LOW" })
               }
@@ -163,6 +172,7 @@ export const ProductFilters = () => {
               type="radio"
               id="price-l2h"
               name="sort"
+              checked={sort === "LOW_TO_HIGH"}
               onChange={() =>
                 dispatch({ type: "SORT_FILTER", payload: "LOW_TO_HIGH" })
               }

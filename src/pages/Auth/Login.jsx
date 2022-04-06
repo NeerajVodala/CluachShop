@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Navbar } from "../../../components/Navbar/Navbar";
-import "../Auth.css";
+import { Navbar } from "../../components";
+import "./Auth.css";
 
 export const Login = () => {
   return (
@@ -11,7 +11,7 @@ export const Login = () => {
           <div className="input-section">
             <h3>Login</h3>
             <div className="input-container">
-              <label for="email" className="label">
+              <label htmlFor="email" className="label">
                 Email address
               </label>
               <input
@@ -22,7 +22,7 @@ export const Login = () => {
               />
             </div>
             <div className="input-container">
-              <label for="password" className="label">
+              <label htmlFor="password" className="label">
                 Password
               </label>
               <input
@@ -35,12 +35,12 @@ export const Login = () => {
             <div className="flex-row align-center justify-center gp-2xl">
               <div className="flex-row align-center gp-s">
                 <input type="checkbox" id="remember-me" />
-                <label for="remember-me" className="label text-s">
+                <label htmlFor="remember-me" className="label text-s">
                   {" "}
                   Remember me
                 </label>
               </div>
-              <div className="text-s">Forgot your Password?</div>
+              <div className="text-s">htmlForgot your Password?</div>
             </div>
             <button className="btn btn-m solid br-s">Login</button>
             <div className="text-center text-m">
