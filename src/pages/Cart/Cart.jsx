@@ -1,5 +1,5 @@
 import cap from "../../assets/images/cap.jpg";
-import { Navbar } from "../../components/Navbar/Navbar";
+import { Navbar } from "../../components";
 import "./Cart.css";
 
 export const Cart = () => {

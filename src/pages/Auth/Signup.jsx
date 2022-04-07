@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Navbar } from "../../../components/Navbar/Navbar";
-import "../Auth.css";
+import { Navbar } from "../../components";
+import "./Auth.css";
 
 export const Signup = () => {
   return (
@@ -12,7 +12,7 @@ export const Signup = () => {
             <h3>Signup</h3>
             <div className="flex-row align-center justify-center gp-2xl">
               <div className="input-container">
-                <label for="first-name" className="label">
+                <label htmlFor="first-name" className="label">
                   First Name
                 </label>
                 <input
@@ -23,7 +23,7 @@ export const Signup = () => {
                 />
               </div>
               <div className="input-container">
-                <label for="last-name" className="label">
+                <label htmlFor="last-name" className="label">
                   Last Name
                 </label>
                 <input
@@ -35,7 +35,7 @@ export const Signup = () => {
               </div>
             </div>
             <div className="input-container">
-              <label for="email" className="label">
+              <label htmlFor="email" className="label">
                 Email address
               </label>
               <input
@@ -46,7 +46,7 @@ export const Signup = () => {
               />
             </div>
             <div className="input-container">
-              <label for="password" className="label">
+              <label htmlFor="password" className="label">
                 Password
               </label>
               <input
@@ -57,7 +57,7 @@ export const Signup = () => {
               />
             </div>
             <div className="input-container">
-              <label for="password" className="label">
+              <label htmlFor="password" className="label">
                 Confirm Password
               </label>
               <input
@@ -69,7 +69,7 @@ export const Signup = () => {
             </div>
             <div>
               <input type="checkbox" id="terms" />
-              <label for="terms" className="label">
+              <label htmlFor="terms" className="label">
                 {" "}
                 I accept all Terms & Conditions
               </label>
