@@ -32,7 +32,7 @@ export const ProductListing = () => {
       <Navbar />
       <main className="flex-row">
         <ProductFilters />
-        <div className="product-section flex-row flex-wrap gp-2xl">
+        <div className="product-section flex-row flex-wrap justify-center gp-2xl">
           {products.map((product) => (
             <ProductCard productDetails={product} key={product._id} />
           ))}
