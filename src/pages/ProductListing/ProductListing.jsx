@@ -1,19 +1,32 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { Navbar } from "../../components/Navbar/Navbar";
-import { ProductCard } from "./components/ProductCard/ProductCard";
-import { ProductFilters } from "./components/ProductFilters/ProductsFilters";
 import "./ProductListing.css";
+import { Navbar, ProductFilters, ProductCard } from "../../components";
+import {
+  getCollectionsFilteredData,
+  getDiscountFilteredData,
+  getPriceFilteredData,
+  getSortedData,
+} from "../../utils";
+import { useProducts, useFilters } from "../../contexts";
 
 export const ProductListing = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    (async () => {
-      const response = await axios.get("/api/products");
-      setProducts(response.data.products);
-    })();
-  }, []);
-
+  const { dbData } = useProducts();
+  const {
+    filterState: { collections, price, discount, sort },
+  } = useFilters();
+  const collectionsFilteredData = getCollectionsFilteredData(
+    dbData,
+    collections
+  );
+  const priceFilteredData = getPriceFilteredData(
+    collectionsFilteredData,
+    price
+  );
+  const discountFilteredData = getDiscountFilteredData(
+    priceFilteredData,
+    discount
+  );
+  const sortedData = getSortedData(discountFilteredData, sort);
+  const products = sortedData;
   return (
     <>
       <Navbar />
@@ -21,7 +34,7 @@ export const ProductListing = () => {
         <ProductFilters />
         <div className="product-section flex-row flex-wrap gp-2xl">
           {products.map((product) => (
-            <ProductCard productDetail={product} key={product._id} />
+            <ProductCard productDetails={product} key={product._id} />
           ))}
         </div>
       </main>

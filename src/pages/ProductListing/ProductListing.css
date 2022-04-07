@@ -1,6 +1,6 @@
 .filter-section {
   flex-basis: 20%;
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--bg-secondary);
 }
 
@@ -10,7 +10,7 @@
 }
 
 .price-slider {
-  width: 50%;
+  width: 100%;
 }
 
 .card-actions {
