@@ -19,17 +19,14 @@ export const Wishlist = () => {
             <div className="card-badge">33% off</div>
             <div className="card-nonmedia">
               <div className="card-details flex-col">
-                <p className="text-center text-m">Daniel Ricciardo Cap</p>
-                <p className="text-center text-bold text-l">
+                <p className="text-center text-l">DR3 - Daniel Ricciardo Cap</p>
+                <p className="text-center text-bold text-xl">
                   ₹3350{" "}
-                  <span className="text-s text-regular text-strike">₹5000</span>
+                  <span className="text-m text-regular text-strike">₹5000</span>
                 </p>
               </div>
               <div className="card-actions">
-                <button className="btn btn-s btn-fill outline br-s">
-                  Move to Cart
-                </button>
-                <button className="btn btn-s btn-fill solid br-s">
+                <button className="btn btn-m btn-fill solid br-s">
                   Move to Cart
                 </button>
               </div>
