@@ -1,6 +1,5 @@
 export const ProductCard = ({ productDetails }) => {
-  const { title, collection, price, discount, discountPrice, imageUrl } =
-    productDetails;
+  const { title, price, discount, discountPrice, imageUrl } = productDetails;
 
   return (
     <>
