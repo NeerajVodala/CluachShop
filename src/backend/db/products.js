@@ -13,7 +13,7 @@ export const products = [
     collectionId: "SF",
     price: 5000,
     discount: 33,
-    discountPrice: 1350,
+    discountPrice: 2350,
     imageUrl:
       "https://raw.githubusercontent.com/NeerajVodala/cluachshop/development/src/assets/images/sf-cap.jpg",
     fastDelivery: false,
