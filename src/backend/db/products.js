@@ -47,7 +47,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Sergio Perez 2022 Team Cap",
+    title: "Sergio Perez Team Cap",
     collection: "Red Bull Racing",
     collectionId: "RBR",
     price: 5000,
@@ -60,7 +60,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Sergio Perez 2022 Team Cap",
+    title: "Sergio Perez Team Cap",
     collection: "Red Bull Racing",
     collectionId: "RBR",
     price: 5000,
@@ -73,7 +73,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Sergio Perez 2022 Team Cap",
+    title: "Sergio Perez Team Cap",
     collection: "Red Bull Racing",
     collectionId: "RBR",
     price: 5000,
@@ -86,7 +86,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "George Russell 2022 Team Cap",
+    title: "George Russell Cap",
     collection: "Mercedes-AMG Petronas",
     collectionId: "MB",
     price: 5000,
@@ -99,7 +99,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "George Russell 2022 Team Cap",
+    title: "George Russell Cap",
     collection: "Mercedes-AMG Petronas",
     collectionId: "MB",
     price: 5000,
@@ -112,7 +112,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "George Russell 2022 Team Cap",
+    title: "George Russell Cap",
     collection: "Mercedes-AMG Petronas",
     collectionId: "MB",
     price: 5000,
@@ -125,7 +125,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Lando Norris British GP Cap",
+    title: "Lando Norris Cap",
     collection: "McLaren F1",
     collectionId: "MCL",
     price: 5000,
@@ -138,7 +138,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Lando Norris British GP Cap",
+    title: "Lando Norris Cap",
     collection: "McLaren F1",
     collectionId: "MCL",
     price: 5000,
@@ -151,7 +151,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Lando Norris British GP Cap",
+    title: "Lando Norris Cap",
     collection: "McLaren F1",
     collectionId: "MCL",
     price: 5000,
