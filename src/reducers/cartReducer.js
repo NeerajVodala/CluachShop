@@ -46,6 +46,8 @@ const cartReducer = (prevState, { type, payload }) => {
           (product) => product._id !== payload
         ),
       };
+    default:
+      return prevState;
   }
 };
 

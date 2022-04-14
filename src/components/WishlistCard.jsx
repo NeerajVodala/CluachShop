@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts";
 
 export const WishlistCard = ({ productDetails }) => {
-  const { _id, title, price, discount, discountPrice, imageUrl, quantity } =
+  const { _id, title, price, discount, discountPrice, imageUrl } =
     productDetails;
   const {
     cartState: { cart },
