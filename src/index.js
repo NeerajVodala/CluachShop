@@ -2,7 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { FiltersProvider, ProductsProvider } from "./contexts";
+import { CartProvider, FiltersProvider, ProductsProvider } from "./contexts";
 import { makeServer } from "./server";
 
 // Call make Server
@@ -13,11 +13,13 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <FiltersProvider>
-        <ProductsProvider>
-          <App />
-        </ProductsProvider>
-      </FiltersProvider>
+      <CartProvider>
+        <FiltersProvider>
+          <ProductsProvider>
+            <App />
+          </ProductsProvider>
+        </FiltersProvider>
+      </CartProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

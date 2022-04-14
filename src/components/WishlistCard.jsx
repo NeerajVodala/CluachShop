@@ -1,17 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts";
 
-export const ProductCard = ({ productDetails }) => {
-  const { _id, title, price, discount, discountPrice, imageUrl } =
+export const WishlistCard = ({ productDetails }) => {
+  const { _id, title, price, discount, discountPrice, imageUrl, quantity } =
     productDetails;
   const {
-    cartState: { cart, wishlist },
+    cartState: { cart },
     cartDispatch,
   } = useCart();
   const navigate = useNavigate();
   const productInCart = cart.find((product) => product._id === _id);
-  const productInWishlist = wishlist.find((product) => product._id === _id);
-
   return (
     <>
       <div className="card card-vertical flex-col shadow-1 br-s">
@@ -28,26 +26,17 @@ export const ProductCard = ({ productDetails }) => {
             </p>
           </div>
           <div className="card-actions">
-            {productInWishlist ? (
-              <button
-                className="btn btn-s btn-fill br-s outline"
-                onClick={() => navigate("/wishlist")}
-              >
-                Go to Wishlist
-              </button>
-            ) : (
-              <button
-                className="btn btn-s btn-fill br-s outline"
-                onClick={() =>
-                  cartDispatch({
-                    type: "ADD_TO_WISHLIST",
-                    payload: productDetails,
-                  })
-                }
-              >
-                Save to Wishlist
-              </button>
-            )}
+            <button
+              className="btn btn-s btn-fill br-s outline"
+              onClick={() =>
+                cartDispatch({
+                  type: "REMOVE_FROM_WISHLIST",
+                  payload: _id,
+                })
+              }
+            >
+              Remove from Wishlist
+            </button>
             {productInCart ? (
               <button
                 className="btn btn-s btn-fill br-s solid"

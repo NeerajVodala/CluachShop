@@ -10,7 +10,7 @@ export const Signup = () => {
         <div className="auth-container flex-row align-center justify-center shadow-1 br-s">
           <div className="input-section">
             <h3>Signup</h3>
-            <div className="flex-row align-center justify-center gp-2xl">
+            <div className="flex-row align-center justify-center gp-s">
               <div className="input-container">
                 <label htmlFor="first-name" className="label">
                   First Name
