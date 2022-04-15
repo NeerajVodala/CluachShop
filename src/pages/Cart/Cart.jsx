@@ -4,8 +4,7 @@ import { useCart } from "../../contexts";
 import "./Cart.css";
 
 export const Cart = () => {
-  const { cartState } = useCart();
-  const { cart } = cartState;
+  const { cart } = useCart();
   return (
     <>
       <Navbar />
@@ -28,9 +27,9 @@ export const Cart = () => {
               <p className="text-xl text-bold">Your cart is empty!</p>
               <p className="text-m">Add items to it now.</p>
             </span>
-            <button className="btn btn-m solid br-s">
-              <Link to="/products">Shop now</Link>
-            </button>
+            <Link to="/products">
+              <button className="btn btn-m solid br-s">Shop now</button>
+            </Link>
           </div>
         )}
       </main>

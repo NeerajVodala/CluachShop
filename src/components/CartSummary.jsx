@@ -2,13 +2,9 @@ import { useCart } from "../contexts";
 import { getDiscountPrice, getTotalPrice } from "../utils";
 
 export const CartSummary = () => {
-  const {
-    cartState: { cart },
-  } = useCart();
-
+  const { cart } = useCart();
   const totalPrice = getTotalPrice(cart);
   const discountPrice = getDiscountPrice(cart);
-
   return (
     <>
       <div className="cart-price-section">

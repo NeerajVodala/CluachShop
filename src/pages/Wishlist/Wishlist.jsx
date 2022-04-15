@@ -4,8 +4,7 @@ import { useCart } from "../../contexts";
 import "./Wishlist.css";
 
 export const Wishlist = () => {
-  const { cartState } = useCart();
-  const { wishlist } = cartState;
+  const { wishlist } = useCart();
   return (
     <>
       <Navbar />
@@ -27,9 +26,9 @@ export const Wishlist = () => {
                 You have no items in your wishlist. Start adding!
               </p>
             </span>
-            <button className="btn btn-m solid br-s">
-              <Link to="/products">Shop now</Link>
-            </button>
+            <Link to="/products">
+              <button className="btn btn-m solid br-s">Shop now</button>
+            </Link>
           </div>
         )}
       </main>

@@ -1,15 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts";
+import { checkProductIn } from "../utils";
 
 export const WishlistCard = ({ productDetails }) => {
   const { _id, title, price, discount, discountPrice, imageUrl } =
     productDetails;
-  const {
-    cartState: { cart },
-    cartDispatch,
-  } = useCart();
+  const { cart, cartDispatch } = useCart();
   const navigate = useNavigate();
-  const productInCart = cart.find((product) => product._id === _id);
+  const productInCart = checkProductIn(cart, _id);
   return (
     <>
       <div className="card card-vertical flex-col shadow-1 br-s">
