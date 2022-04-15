@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts";
 import { checkProductIn } from "../utils";
 
@@ -6,7 +5,6 @@ export const CartCard = ({ productDetails }) => {
   const { _id, title, price, discount, discountPrice, imageUrl, quantity } =
     productDetails;
   const { wishlist, cartDispatch } = useCart();
-  const navigate = useNavigate();
   const productInWishlist = checkProductIn(wishlist, _id);
   const moveToWishlist = () => {
     if (!productInWishlist)
