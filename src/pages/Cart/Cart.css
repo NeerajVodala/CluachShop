@@ -4,15 +4,15 @@
 
 .cart-product-section {
   gap: 2rem;
-  flex-basis: 60%;
+  flex-basis: 65%;
 }
 
 .cart-price-section {
-  flex-basis: 40%;
+  flex-basis: 35%;
 }
 
 .card-horizontal {
-  max-height: 25rem;
+  max-height: 20rem;
   margin: auto;
 }
 
@@ -21,26 +21,36 @@
 }
 
 .card-horizontal-media img {
-  opacity: 70%;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .card-horizontal-nonmedia {
+  align-items: center;
+  justify-content: space-evenly;
   width: 60%;
 }
 
-.card-horizontal-details {
-  gap: 1rem;
-  padding: 2rem;
-}
-
 .operator {
-  display: inline-block;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 1.5rem;
   width: 1.5rem;
   background-color: var(--bg-primary);
+  cursor: pointer;
+}
+
+.operator-disabled {
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.card-horizontal-nonmedia .card-actions {
+  width: 100%;
+  gap: 0.5rem;
 }
 
 .price-card {
@@ -49,4 +59,13 @@
   padding: 3rem;
   margin-right: auto;
   gap: 1rem;
+}
+
+.btn-fill {
+  width: 95%;
+}
+
+.card-horizontal-media img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }

@@ -2,13 +2,12 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts";
 import { checkProductIn } from "../utils";
 
-export const ProductCard = ({ productDetails }) => {
+export const WishlistCard = ({ productDetails }) => {
   const { _id, title, price, discount, discountPrice, imageUrl } =
     productDetails;
-  const { cart, wishlist, cartDispatch } = useCart();
+  const { cart, cartDispatch } = useCart();
   const navigate = useNavigate();
   const productInCart = checkProductIn(cart, _id);
-  const productInWishlist = checkProductIn(wishlist, _id);
   return (
     <>
       <div className="card card-vertical flex-col shadow-1 br-s">
@@ -25,26 +24,17 @@ export const ProductCard = ({ productDetails }) => {
             </p>
           </div>
           <div className="card-actions">
-            {productInWishlist ? (
-              <button
-                className="btn btn-s btn-fill br-s outline"
-                onClick={() => navigate("/wishlist")}
-              >
-                Go to Wishlist
-              </button>
-            ) : (
-              <button
-                className="btn btn-s btn-fill br-s outline"
-                onClick={() =>
-                  cartDispatch({
-                    type: "ADD_TO_WISHLIST",
-                    payload: productDetails,
-                  })
-                }
-              >
-                Save to Wishlist
-              </button>
-            )}
+            <button
+              className="btn btn-s btn-fill br-s outline"
+              onClick={() =>
+                cartDispatch({
+                  type: "REMOVE_FROM_WISHLIST",
+                  payload: _id,
+                })
+              }
+            >
+              Remove from Wishlist
+            </button>
             {productInCart ? (
               <button
                 className="btn btn-s btn-fill br-s solid"
