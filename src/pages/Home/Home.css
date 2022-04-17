@@ -1,0 +1,43 @@
+.homepage {
+  display: grid;
+  grid-template-areas:
+    "banner    banner"
+    "category1 category2"
+    "category3 category4";
+}
+
+.homepage-banner {
+  grid-area: banner;
+  cursor: pointer;
+}
+
+.homepage-category-1 {
+  grid-area: category1;
+  cursor: pointer;
+}
+
+.homepage-category-2 {
+  grid-area: category2;
+  cursor: pointer;
+}
+
+.homepage-category-3 {
+  grid-area: category3;
+  cursor: pointer;
+}
+
+.homepage-category-4 {
+  grid-area: category4;
+  cursor: pointer;
+}
+
+@media (max-width: 30rem) {
+  .homepage {
+    grid-template-areas:
+      "banner  "
+      "category1"
+      "category2"
+      "category3"
+      "category4";
+  }
+}
