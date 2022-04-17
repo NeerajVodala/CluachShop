@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"; 
+import { Routes, Route } from "react-router-dom";
 import {
   LandingPage,
   ProductListing,
@@ -6,14 +6,16 @@ import {
   Wishlist,
   Login,
   Signup,
+  Home,
 } from "../pages";
 
 export const AppRoutes = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<LandingPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/landingpage" element={<LandingPage />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/products" element={<ProductListing />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
