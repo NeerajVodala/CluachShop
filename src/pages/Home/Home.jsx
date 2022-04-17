@@ -26,7 +26,7 @@ export const Home = () => {
         >
           <img
             src="https://raw.githubusercontent.com/NeerajVodala/cluachshop/homepage-new/src/assets/images/f1-banner-1.jpg"
-            alt="responsive image"
+            alt="banner"
             className="img-responsive"
           ></img>
         </div>
@@ -38,7 +38,7 @@ export const Home = () => {
             >
               <img
                 src={category.imageUrl}
-                alt="responsive image"
+                alt="category"
                 className="img-responsive"
               ></img>
             </div>
